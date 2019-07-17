@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CATALOG> 
+  <CD> 
+    <userName>16201512</userName>  
+    <Headimg>1.jpg</Headimg> 
+  </CD>  
+  <CD> 
+    <userName>10001</userName>  
+    <Headimg>man.jpg</Headimg> 
+  </CD>  
+  <CD> 
+    <userName>1001</userName>  
+    <Headimg>fy_ic_flght_TC.png</Headimg>
+  </CD> 
+</CATALOG>

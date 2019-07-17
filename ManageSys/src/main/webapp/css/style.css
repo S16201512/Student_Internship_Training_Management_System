@@ -1,0 +1,536 @@
+﻿* {
+    font-size: 9pt;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: '微软雅黑';
+    margin: 0 auto;
+    min-width: 980px;
+}
+
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+span {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+a, a:focus {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+    blr: expression(this.onFocus=this.blur());
+}
+
+a:hover {
+    color: #00a4ac;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+cite {
+    font-style: normal;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+/*cloud*/
+
+#mainBody {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.cloud {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(../images/cloud.png) no-repeat;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+#cloud2 {
+    z-index: 2;
+}
+
+/*login*/
+.logintop {
+    height: 47px;
+    position: absolute;
+    top: 0;
+    background: url(../images/loginbg1.png) repeat-x;
+    z-index: 100;
+    width: 100%;
+}
+
+.logintop span {
+    color: #fff;
+    line-height: 47px;
+    text-indent: 44px;
+    color: #afc5d2;
+    float: left;
+}
+
+.logintop ul {
+    float: right;
+    padding-right: 30px;
+}
+
+.logintop ul li {
+    float: left;
+    margin-left: 20px;
+    line-height: 47px;
+}
+
+.logintop ul li a {
+    color: #afc5d2;
+}
+
+.logintop ul li a:hover {
+    color: #fff;
+}
+
+.loginbody {
+    background: url(../images/loginbg3.png) no-repeat center center;
+    width: 100%;
+    height: 585px;
+    overflow: hidden;
+    position: absolute;
+    top: 47px;
+}
+
+.systemlogo {
+    width: 100%;
+    height: 71px;
+    margin-top: 75px;
+}
+
+.loginbox {
+    width: 471px;
+    height: 336px;
+    background: url(../images/navbg.png) no-repeat;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
+.loginbox ul {
+    margin-left: 75px;
+}
+
+.loginbox ul li {
+    margin-bottom: 25px;
+}
+
+.loginbox ul li label {
+    color: #687f92;
+    padding-left: 100px;
+}
+
+.loginbox ul li label a {
+    color: #687f92;
+}
+
+.loginbox ul li label a:hover {
+    color: #3d96c9;
+}
+
+.loginbox ul li label input {
+    margin-right: 5px;
+}
+
+.loginuser {
+    width: 299px;
+    height: 48px;
+    background: url(../images/loginuser.png) no-repeat;
+    border: none;
+    line-height: 48px;
+    padding-left: 44px;
+    font-size: 14px;
+    color: #90a2bc;
+}
+
+.loginpwd {
+    width: 299px;
+    height: 48px;
+    background: url(../images/loginpassword.png) no-repeat;
+    border: none;
+    line-height: 48px;
+    padding-left: 44px;
+    font-size: 14px;
+    color: #90a2bc;
+}
+
+.loginselect {
+    font-family: "微软雅黑";
+    background: rgba(0, 0, 0, 0);
+    width: 150px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px #1a1a1a solid;
+    border-radius: 5px;
+    margin-left: 110px;
+}
+
+option {
+    color: black;
+    background: #A6E1EC;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.loginbtn {
+    margin-left: 110px;
+    width: 111px;
+    height: 35px;
+    background: url(../images/buttonbg.png) repeat-x;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    line-height: 35px;
+}
+
+.loginbm {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: url(../images/loginbg2.png) repeat-x;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #0b3a58;
+}
+
+.loginbm a {
+    font-weight: bold;
+    color: #0b3a58;
+}
+
+.loginbm a:hover {
+    color: #fff;
+}
+
+.top {
+    width: 100%;
+    height: 88px;
+    background: url(../images/topbg.jpg) no-repeat 20%;
+}
+
+.header {
+    height: 88px;
+}
+
+.topleft {
+    height: 88px;
+    float: left;
+    width: 300px;
+}
+
+.topleft img {
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.topright {
+    height: 88px;
+    float: right;
+}
+
+.nav {
+    float: left;
+}
+
+.nav li {
+    float: left;
+    width: 87px;
+    height: 88px;
+    text-align: center;
+}
+
+.nav li a {
+    display: block;
+    width: 87px;
+    height: 88px;
+    -moz-transition: none;
+    transition: background-color 0.3s linear;
+    -moz-transition: background-color 0.3s linear;
+    -webkit-transition: background-color 0.3s linear;
+    -o-transition: background-color 0.3s linear;
+}
+
+.nav li a.selected {
+    background: url(../images/navbg.png) no-repeat;
+}
+
+.nav li a:hover {
+    display: block;
+    background: #000;
+    color: #fff;
+    background: none repeat scroll 0% 0% rgb(43, 127, 181);
+}
+
+.nav li img {
+    margin-top: 10px;
+}
+
+.nav li a {
+    display: block;
+}
+
+.nav a h2 {
+    font-size: 14px;
+    color: #d6e8f1;
+}
+
+.nav a:hover h2 {
+    color: #fff;
+}
+
+.topright ul {
+    padding-top: 15px;
+    float: right;
+    padding-right: 12px;
+}
+
+.topright ul li {
+    float: left;
+    padding-left: 9px;
+    padding-right: 9px;
+    background: url(../images/line.gif) no-repeat right;
+}
+
+.topright ul li:last-child {
+    background: none;
+}
+
+.topright ul li a {
+    font-size: 13px;
+    color: #e9f2f7;
+}
+
+.topright ul li a:hover {
+    color: #fff;
+}
+
+.topright ul li span {
+    margin-top: 2px;
+    float: left;
+    padding-right: 3px;
+}
+
+.user {
+    height: 30px;
+    background: url(../images/ub1.png) repeat-x;
+    clear: both;
+    margin-top: 10px;
+    float: right;
+    margin-right: 12px;
+    border-radius: 30px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.user span {
+    display: inline-block;
+    padding-right: 10px;
+    background: url(../images/user.png) no-repeat 15px 10px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #b8ceda;
+    padding-left: 20px;
+    padding-left: 35px;
+}
+
+.user b {
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    background: url(../images/msg.png);
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 13px;
+    margin-top: 7px;
+    line-height: 18px;
+}
+
+.user i {
+    display: inline-block;
+    margin-right: 5px;
+    font-style: normal;
+    line-height: 30px;
+    font-size: 14px;
+    color: #b8ceda;
+}
+
+.container {
+    width: 100%;
+}
+
+.lefttop {
+    background: url(../images/lefttop.gif) repeat-x;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.lefttop span {
+    margin-left: 8px;
+    margin-top: 10px;
+    margin-right: 8px;
+    background: url(../images/leftico.png) no-repeat;
+    width: 20px;
+    height: 21px;
+    float: left;
+}
+
+.leftmenu {
+    width: 14%;
+    height: 100%;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+    overflow: hidden;
+    background: url(../images/leftline.gif) repeat-y right;
+    float: left;
+}
+
+.leftmenu dd {
+    background: url(../images/leftmenubg.gif) repeat-x;
+    line-height: 35px;
+    font-weight: bold;
+    font-size: 14px;
+    border-right: solid 1px #b7d5df;
+}
+
+.leftmenu dd span {
+    float: left;
+    margin: 10px 8px 0 12px;
+}
+
+.leftmenu dd .menuson {
+    display: none;
+}
+
+.leftmenu dd:first-child .menuson {
+    display: block;
+}
+
+.menuson {
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.menuson li {
+    cursor: pointer;
+}
+
+.menuson li.active {
+    position: relative;
+    background: url(../images/libg.png) repeat-x;
+    line-height: 30px;
+    color: #fff;
+}
+
+.menuson li cite {
+    display: block;
+    float: left;
+    margin-left: 32px;
+    background: url(../images/list.gif) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-top: 7px;
+}
+
+.menuson li.active cite {
+    background: url(../images/list1.gif) no-repeat;
+}
+
+.menuson li.active i {
+    display: block;
+    background: url(../images/sj.png) no-repeat;
+    width: 6px;
+    height: 11px;
+    position: absolute;
+    right: 0;
+    z-index: 10000;
+    top: 9px;
+    right: -1px;
+}
+
+.menuson li a {
+    display: block;
+    *display: inline;
+    *padding-top: 5px;
+}
+
+.menuson li.active a {
+    color: #fff;
+}
+
+.title {
+    cursor: pointer;
+}
+
+.main {
+    float: left;
+    width:85.9%;
+
+}
+
+table.gridtable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+table.gridtable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+}
+table.gridtable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}

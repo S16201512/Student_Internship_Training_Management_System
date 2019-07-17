@@ -1,0 +1,155 @@
+create database TraMnaSys;
+   
+
+create table t_teacher (tno varchar(24) primary key,
+			psd varchar(108),
+		     	name varchar(108),
+		      	phone varchar(108),
+			qq varchar(108),
+			profession varchar(108)
+			);
+insert into t_teacher values('16201502','123','黄凯','1579797170','1337111735','软件');
+
+create table t_admin   (ano varchar(20) primary key,
+		        psd varchar(100),
+		     	name varchar(100),
+		      	phone varchar(100),
+			qq varchar(100));
+insert into t_admin  values('16201501','123','何文勇','1579797170','1337111735')
+
+create table t_student (sno varchar(20) primary key,
+                        cno varchar(20),
+		        psd varchar(100),
+		     	name varchar(100),
+		      	phone varchar(100),
+			qq varchar(100));
+insert into t_student values('16201503','123','李强','1579797170','1337111735');
+
+/**删除了fno
+create table task(
+          task_no int auto_increment primary key,
+          task_name varchar(100),     
+	  tno varchar(24),
+          task_content varchar(1000),
+          submit    boolean default 0,
+          start_time dateTime,
+          end_time  datetime,
+          create_time  datetime
+);
+insert into task values(8,'第一次任务','16201502','写一篇论文',0,'2017-8-9 12:02:30','2019-9-9 20:25:00','2017-8-9 12:02:30');
+
+/**
+老师与班级
+**/
+
+insert into t_tc values('162015','16201502');
+
+create table t_file(fno int auto_increment primary key,
+		    filename varchar(100),
+		    filetype varchar(30),
+                    time     varchar(200),
+                    task_no int,
+                    owe_perNo varchar(200)
+		);
+
+create table t_tc (cno varchar(30),
+		   tno varchar(20),
+	 
+                   primary key(cno,tno)
+		   );
+/**增加totalPerson，
+create table t_class(
+                cno varchar(20) primary key,
+		
+	profession varchar(108),
+                totalPerson int
+);
+  //增加一个字段
+CREATE TABLE student_task(
+              sno VARCHAR(20),
+              task_no INT,
+	      task_staus  VARCHAR(100) DEFAULT('待做'),
+              submit_content VARCHAR(255), 
+              grade   INT,
+              remake  VARCHAR(255),
+              submit BOOLEAN,
+              isScored BOOLEAN,
+              submit_time DATETIME
+         );
+
+
+select task.task_no,task_name,tno,task_content,start_time,end_time,grade,task_staus
+from task,student_task where task.task_no=student_task.task_no and sno='16201503'
+
+drop trigger update_student_task;
+delimiter $
+create trigger update_student_task 
+after update on  task for each row
+begin    
+     declare t_sno varchar(255);
+     declare Done int DEFAULT 0;
+     declare result cursor for select sno from t_student,t_tc where t_student.cno=t_tc.cno and t_tc.tno=new.tno;
+     declare continue handler for not found set Done =1; 
+     open  result;
+     flag_loop:loop
+     fetch  result into t_sno;
+     if Done then leave flag_loop ; end if ;
+     if (new.submit=1 and t_sno not in(select sno from student_task where task_no=new.task_no))
+     then      
+     insert into student_task(sno,task_no) values(t_sno,new.task_no);
+     end if;
+     if(new.submit=0 and t_sno in(select sno from student_task where task_no=new.task_no))
+     then
+     delete from  student_task where sno=t_sno and task_no=new.task_no;
+     end if;
+     end loop flag_loop;
+     close result;
+end 
+$
+delimiter ;
+     
+     SHOW VARIABLES LIKE 'event_remind_status'; 
+
+DELIMITER |  
+
+DROP PROCEDURE IF EXISTS update_task_status |  
+
+CREATE PROCEDURE update_task_status()  
+
+BEGIN  
+    
+IF exists (SELECT task.task_no from task where  SYSDATE()>=task.end_time) 
+THEN  
+            
+update student_task set task_staus='已过期'  
+            
+where task_no in 
+(SELECT task.task_no from task where  SYSDATE()>=task.end_time);  
+    
+END IF;  
+
+END   
+ |  
+
+DELIMITER;
+SET GLOBAL event_scheduler = ON;
+
+DELIMITER //  
+CREATE EVENT  event_remind_status  
+ON SCHEDULE EVERY 1 second  do  
+begin  
+call update_task_status();  
+end //  
+DELIMITER;
+ //开启定时器
+
+ALTER EVENT event_remind_status ON    
+COMPLETION PRESERVE ENABLE;
+
+
+ 
+ select name,task_name,t_student.sno,t_student.cno,submit_content,submit_time,task_content from task,student_task,t_student 
+where student_task.task_no=1 and student_task.sno='16201503' and student_task.sno=t_student.sno and student_task.task_no=task.task_no; 
+
+               
+

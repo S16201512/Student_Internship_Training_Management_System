@@ -1,0 +1,44 @@
+
+.container .main{
+    float: left;
+    text-align: center;
+    width: 45%;
+    height: 80%;
+    margin-left: 25%;
+}
+
+.container .main .form_wrap{
+    height: 100%;
+    overflow: hidden;
+}
+
+.container .main .form_info{
+    height: 100%;
+    overflow: hidden;
+}
+
+.container .main .form_wrap .each_line{
+    overflow: hidden;
+}
+
+.container .main .form_wrap .info_title{
+    font-size: 20px;float: left;padding-top: 13px;
+}
+.container .main .form_wrap .input_info{
+    height: 100%; overflow: hidden;float: left;margin-bottom: 8px;border: 1px #aaa solid;border-radius: 4px;background: 0 0;text-align: left;font-size: 20px;width: 438px;height: 50px;line-height: 1.3;padding: 0 20px;
+}
+
+
+
+
+
+.container .main .form_wrap .confirm_button_wrap{
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    height: 100px;
+}
+
+.container .main .form_wrap .confirm_button{
+    margin-left:100px;border-radius:10px;background-color:#2f86f6;color: #fff;min-width: 100px;height: 40px;line-height: 37px;
+}

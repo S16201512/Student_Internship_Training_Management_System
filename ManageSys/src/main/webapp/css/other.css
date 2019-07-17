@@ -1,0 +1,43 @@
+﻿.classFile p{
+    margin: 10px;
+    height: 40px;
+}
+.classFileUpload{
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+}
+.filetext{
+    font-size: 20px;
+    height: 40px;
+    border: 1px solid #1babb3;
+}
+.fileButton{
+    width: 70px;
+    background-color: #2f86f6;
+    border-radius: 5px;
+    box-shadow: 0px 5px 0px #1175c8, 0px 5px 25px #90a2bc;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+}
+.fileUpload p{
+    margin: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+.peopleInfoUpload{
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+}
+.peopleFiletext{
+    font-size: 20px;
+    height: 40px;
+    border: 1px solid #1babb3;
+}
+.radio-text{
+    font-size: 20px;
+}

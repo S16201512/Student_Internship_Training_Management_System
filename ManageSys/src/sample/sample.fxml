@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<!--<FlowPane hgap="10.0"-->
+        <!--prefHeight="1200" prefWidth="800"-->
+        <!--vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"-->
+        <!--fx:controller="sample.Controller">-->
+
+    <!--<WebView fx:id="webView"-->
+             <!--prefHeight="1200" prefWidth="800"-->
+    <!--/>-->
+<!--</FlowPane>-->
+
+<!--<GridPane hgap="10.0"-->
+          <!--prefHeight="1200" prefWidth="800"-->
+          <!--vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"-->
+          <!--fx:controller="sample.Controller">-->
+
+  <!--<WebView fx:id="webView"-->
+           <!--prefHeight="1200" prefWidth="1200"-->
+  <!--/>-->
+<!--</GridPane>-->
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+         >
+
+  <WebView fx:id="webView"
+  />
+</StackPane>
